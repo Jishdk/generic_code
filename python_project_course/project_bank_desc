@@ -1,0 +1,73 @@
+# Parameter: Code name
+# Value: banks_project.py
+# Description: Name of the Python script file where the code for this project is located.
+
+# Parameter: Data URL
+# Value: https://web.archive.org/web/20230908091635/https://en.wikipedia.org/wiki/List_of_largest_banks
+# Description: URL of the web page containing the data table to be extracted.
+
+# Parameter: Exchange rate CSV path
+# Value: https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMSkillsNetwork-PY0221EN-Coursera/labs/v2/exchange_rate.csv
+# Description: URL of the CSV file containing exchange rate data used for currency conversion.
+
+# Parameter: Table Attributes (upon Extraction only)
+# Value: Name, MC_USD_Billion
+# Description: Attributes of the table to be extracted initially - Bank names and their Market Capitalization in USD Billion.
+
+# Parameter: Table Attributes (final)
+# Value: Name, MC_USD_Billion, MC_GBP_Billion, MC_EUR_Billion, MC_INR_Billion
+# Description: Final attributes of the table after transformation, including Market Capitalization in USD, GBP, EUR, and INR Billion.
+
+# Parameter: Output CSV Path
+# Value: ./Largest_banks_data.csv
+# Description: File path where the final transformed data will be saved as a CSV file.
+
+# Parameter: Database name
+# Value: Banks.db
+# Description: Name of the database file where the data will be stored.
+
+# Parameter: Table name
+# Value: Largest_banks
+# Description: Name of the table within the database where data from the CSV will be loaded.
+
+# Parameter: Log file
+# Value: code_log.txt
+# Description: Name of the file where logs of the code execution progress will be stored.
+
+ -------------------------------------------------------------------------------------------------
+
+# Task 1:
+# Define a function named log_progress() that will log the progress of your code at various stages.
+# The function should write log entries to a file named code_log.txt.
+# Use the provided list of log points for creating log entries at each stage of the code.
+
+# Task 2:
+# Extract tabular information from a given URL, specifically from the 'By market capitalization' section.
+# a. Inspect the webpage to determine the location and format of the table in the HTML code.
+# b. Write a function named extract() to scrape and extract this data.
+# c. Call extract() to test its functionality and ensure it extracts the required data correctly.
+
+# Task 3:
+# Transform the extracted dataframe to include columns for Market Capitalization in GBP, EUR, and INR.
+# The values should be rounded to 2 decimal places.
+# a. Implement a transform() function to add these columns based on the exchange rates provided in a CSV file.
+# b. Test the transform() function to ensure it adds the new columns correctly.
+
+# Task 4:
+# Write a function named load_to_csv() to save the transformed dataframe to a CSV file.
+# After implementing the function, execute it to export the dataframe and verify the contents of the CSV file.
+
+# Task 5:
+# Create a function named load_to_db() to load the transformed dataframe into an SQL database table.
+# Execute this function and verify if the data is correctly inserted into the database.
+
+# Task 6:
+# Implement database query execution within a function named run_queries().
+# This function should execute a predefined set of SQL queries on the database table and verify the output.
+
+# Task 7:
+# Verify that all log entries have been correctly recorded in the code_log.txt file.
+# Check the file to ensure all stages of the code execution are logged as expected.
+
+
+
